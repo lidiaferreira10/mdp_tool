@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dimensoes_id: 
+  nivel_privacidades_id: 
+  valor: MyString
+  descricao_valor: MyText
+
+two:
+  dimensoes_id: 
+  nivel_privacidades_id: 
+  valor: MyString
+  descricao_valor: MyText

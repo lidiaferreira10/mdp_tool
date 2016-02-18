@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rede social:</strong>
+  <%= @analise_privacidade.rede_social %>
+</p>
+
+<p>
+  <strong>Url rede social:</strong>
+  <%= @analise_privacidade.url_rede_social %>
+</p>
+
+<p>
+  <strong>Descricao analise:</strong>
+  <%= @analise_privacidade.descricao_analise %>
+</p>
+
+<%= link_to 'Edit', edit_analise_privacidade_path(@analise_privacidade) %> |
+<%= link_to 'Back', analise_privacidades_path %>

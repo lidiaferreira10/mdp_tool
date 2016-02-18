@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rede_social: MyString
+  url_rede_social: MyString
+  descricao_analise: MyText
+
+two:
+  rede_social: MyString
+  url_rede_social: MyString
+  descricao_analise: MyText

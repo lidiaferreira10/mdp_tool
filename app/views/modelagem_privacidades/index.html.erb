@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Modelagem Privacidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimensoes</th>
+      <th>Valor dimensoes</th>
+      <th>Controle privacidades</th>
+      <th>Tipo comunicacoes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modelagem_privacidades.each do |modelagem_privacidade| %>
+      <tr>
+        <td><%= modelagem_privacidade.dimensoes %></td>
+        <td><%= modelagem_privacidade.valor_dimensoes %></td>
+        <td><%= modelagem_privacidade.controle_privacidades %></td>
+        <td><%= modelagem_privacidade.tipo_comunicacoes %></td>
+        <td><%= link_to 'Show', modelagem_privacidade %></td>
+        <td><%= link_to 'Edit', edit_modelagem_privacidade_path(modelagem_privacidade) %></td>
+        <td><%= link_to 'Destroy', modelagem_privacidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modelagem privacidade', new_modelagem_privacidade_path %>

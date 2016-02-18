@@ -1,0 +1,29 @@
+<%= form_for(@analise_privacidade) do |f| %>
+  <% if @analise_privacidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@analise_privacidade.errors.count, "error") %> prohibited this analise_privacidade from being saved:</h2>
+
+      <ul>
+      <% @analise_privacidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rede_social %><br>
+    <%= f.text_field :rede_social %>
+  </div>
+  <div class="field">
+    <%= f.label :url_rede_social %><br>
+    <%= f.text_field :url_rede_social %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao_analise %><br>
+    <%= f.text_area :descricao_analise %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

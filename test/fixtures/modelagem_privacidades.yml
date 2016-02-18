@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dimensoes_id: 
+  valor_dimensoes_id: 
+  controle_privacidades_id: 
+  tipo_comunicacoes_id: 
+
+two:
+  dimensoes_id: 
+  valor_dimensoes_id: 
+  controle_privacidades_id: 
+  tipo_comunicacoes_id: 

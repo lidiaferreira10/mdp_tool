@@ -1,0 +1,29 @@
+<%= form_for(@tipo_comunicacao) do |f| %>
+  <% if @tipo_comunicacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_comunicacao.errors.count, "error") %> prohibited this tipo_comunicacao from being saved:</h2>
+
+      <ul>
+      <% @tipo_comunicacao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Analise_Privacidade_id %><br>
+    <%= f.text_field :Analise_Privacidade_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_comunicacao %><br>
+    <%= f.text_field :tipo_comunicacao %>
+  </div>
+  <div class="field">
+    <%= f.label :observacao %><br>
+    <%= f.text_area :observacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

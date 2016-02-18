@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  categoria_dimensoes_id: 
+  nome_dimensao: MyString
+  codigo_dimensao: MyString
+  descricao_dimensao: MyText
+  significado_nivel_privacidade: MyText
+
+two:
+  categoria_dimensoes_id: 
+  nome_dimensao: MyString
+  codigo_dimensao: MyString
+  descricao_dimensao: MyText
+  significado_nivel_privacidade: MyText

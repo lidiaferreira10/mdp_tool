@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dimensoes:</strong>
+  <%= @modelagem_privacidade.dimensoes %>
+</p>
+
+<p>
+  <strong>Valor dimensoes:</strong>
+  <%= @modelagem_privacidade.valor_dimensoes %>
+</p>
+
+<p>
+  <strong>Controle privacidades:</strong>
+  <%= @modelagem_privacidade.controle_privacidades %>
+</p>
+
+<p>
+  <strong>Tipo comunicacoes:</strong>
+  <%= @modelagem_privacidade.tipo_comunicacoes %>
+</p>
+
+<%= link_to 'Edit', edit_modelagem_privacidade_path(@modelagem_privacidade) %> |
+<%= link_to 'Back', modelagem_privacidades_path %>

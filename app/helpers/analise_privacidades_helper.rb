@@ -1,0 +1,2 @@
+module AnalisePrivacidadesHelper
+end

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Analise Privacidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rede social</th>
+      <th>Url rede social</th>
+      <th>Descricao analise</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analise_privacidades.each do |analise_privacidade| %>
+      <tr>
+        <td><%= analise_privacidade.rede_social %></td>
+        <td><%= analise_privacidade.url_rede_social %></td>
+        <td><%= analise_privacidade.descricao_analise %></td>
+        <td><%= link_to 'Show', analise_privacidade %></td>
+        <td><%= link_to 'Edit', edit_analise_privacidade_path(analise_privacidade) %></td>
+        <td><%= link_to 'Destroy', analise_privacidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Analise privacidade', new_analise_privacidade_path %>

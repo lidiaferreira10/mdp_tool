@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Analise privacidade:</strong>
+  <%= @tipo_comunicacao.Analise_Privacidade %>
+</p>
+
+<p>
+  <strong>Tipo comunicacao:</strong>
+  <%= @tipo_comunicacao.tipo_comunicacao %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @tipo_comunicacao.observacao %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_comunicacao_path(@tipo_comunicacao) %> |
+<%= link_to 'Back', tipo_comunicacoes_path %>
