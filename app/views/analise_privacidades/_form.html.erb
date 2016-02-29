@@ -1,3 +1,4 @@
+
 <%= form_for(@analise_privacidade) do |f| %>
   <% if @analise_privacidade.errors.any? %>
     <div id="error_explanation">
@@ -11,19 +12,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :rede_social %><br>
-    <%= f.text_field :rede_social %>
+  <div class="form-group">
+    <%= f.label 'Rede social' %><br>
+    <%= f.text_field :rede_social, :class=>"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :url_rede_social %><br>
-    <%= f.text_field :url_rede_social %>
+  <div class="form-group">
+    <%= f.label 'URL da rede social' %><br>
+    <%= f.text_field :url_rede_social, :class=>"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :descricao_analise %><br>
-    <%= f.text_area :descricao_analise %>
+  <div class="form-group">
+    <%= f.label 'Descrição da análise' %><br>
+    <%= f.text_area :descricao_analise, :class=>"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Criar/Atualizar Análise', :class=>"btn btn-primary action"%>
   </div>
 <% end %>

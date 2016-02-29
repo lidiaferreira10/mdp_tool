@@ -27,10 +27,15 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html">PDM Tool</a>
+						<%= link_to "PDM Tool", home_index_path, :class=>"navbar-brand" %>
+							
 					</div>
 					<!-- Top Menu Items -->
 					<ul class="nav navbar-right top-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="glyphicon glyphicon-file"></i> Tutorial</a>
+						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i> <% if user_signed_in? %>
 							<%= current_user.email %>
@@ -59,7 +64,7 @@
 					</ul>
 				</nav>
 				<div id="page-wrapper">
-					<div class="container-fluid">
+					<div class="container">
 						<%= yield %>
 					</div>
 					<!-- /.container-fluid -->

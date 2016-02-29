@@ -1,31 +1,59 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Analise Privacidades</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Rede social</th>
-      <th>Url rede social</th>
-      <th>Descricao analise</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @analise_privacidades.each do |analise_privacidade| %>
-      <tr>
-        <td><%= analise_privacidade.rede_social %></td>
-        <td><%= analise_privacidade.url_rede_social %></td>
-        <td><%= analise_privacidade.descricao_analise %></td>
-        <td><%= link_to 'Show', analise_privacidade %></td>
-        <td><%= link_to 'Edit', edit_analise_privacidade_path(analise_privacidade) %></td>
-        <td><%= link_to 'Destroy', analise_privacidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Analise privacidade', new_analise_privacidade_path %>
+<div class="row">
+	<div class="col-lg-12">
+		<p id="notice"><%= notice %></p>
+		
+		<%= link_to 'Criar Nova Análise', new_analise_privacidade_path, :class=>"btn-lg btn-success action link" %>
+		
+		<h2>Bem vindo(a)<% if user_signed_in? %>, <%= current_user.email %>!</h2><br/>
+			<% else %>!</h2><br/>
+			<% end %>
+	</div>
+	
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card-box">
+			
+			<h4 class="text-dark  header-title m-t-0">Minhas Análises</h4>
+			<p class="text-muted m-b-25 font-13"></p>
+			
+			<div class="table-responsive">
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th>Rede social</th>
+				      <th>URL da rede social</th>
+				      <th>Descrição da análise</th>
+				      <th colspan="3"></th>
+				    </tr>
+				  </thead>
+				
+				  <tbody>
+				    <% @analise_privacidades.each do |analise_privacidade| %>
+				      <tr>
+				        <td><%= analise_privacidade.rede_social %></td>
+				        <td><%= analise_privacidade.url_rede_social %></td>
+				        <td><%= analise_privacidade.descricao_analise %></td>
+				        <td><%= link_to 'Visualizar', analise_privacidade %></td>
+				        <td><%= link_to 'Editar', edit_analise_privacidade_path(analise_privacidade) %></td>
+				        <td><%= link_to 'Excluir', analise_privacidade, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir essa análise?' } %></td>
+				      </tr>
+				    <% end %>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="card-box">
+			<h4 class="text-dark  header-title m-t-0">Visualização I</h4>
+			<p class="text-muted m-b-25 font-13"></p>
+		</div>
+	</div>	
+	<div class="col-lg-6">
+		<div class="card-box">
+			<h4 class="text-dark  header-title m-t-0">Visualização II</h4>
+			<p class="text-muted m-b-25 font-13"></p>
+		</div>
+	</div>			
+</div>
