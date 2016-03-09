@@ -1,5 +1,139 @@
-<h1>New Modelagem Privacidade</h1>
+<div class="row">
+	<div class="col-lg-12">
+		<p id="notice">
+			<%= notice %>
+		</p>
 
+		<%= link_to 'Criar Nova Análise', new_analise_privacidade_path, :class=>"btn-lg btn-success action link" %>
+
+		<h2>Rede Social: </h2>
+
+		Nome da Comunicação:
+		<input class="input" />
+	</div>
+</div>
+
+<div class="col-lg-6">
+	<div class="card-box">
+		<h4 class="text-dark  header-title m-t-0"></h4>
+		<p class="text-muted m-b-25 font-13"></p>
+	</div>
+</div>
+<div class="col-lg-6 card-box">
+	
+		<h4 class="text-dark  header-title m-t-0">Dimensões</h4>
+
+		<div class="col-lg-6">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Dimensao #1 </a></h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							1
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Dimensao #2 </a></h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							2
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Dimensao #3 </a></h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+							3
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Dimensao #4 </a></h4>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						<div class="panel-body">
+							4
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5"> Dimensao #5 </a></h4>
+					</div>
+					<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+						<div class="panel-body">
+							5
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6"> Dimensao #6 </a></h4>
+					</div>
+					<div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+						<div class="panel-body">
+							6	
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7"> Dimensao #7 </a></h4>
+					</div>
+					<div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+						<div class="panel-body">
+							7
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8"> Dimensao #8 </a></h4>
+					</div>
+					<div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+						<div class="panel-body">
+							8
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+	
+</div>
+
+<div class="col-lg-6">
+	<div class="card-box">
+		<h4 class="text-dark  header-title m-t-0">Legenda</h4>
+		<p class="text-muted m-b-25 font-13"></p>
+	</div>
+</div>
+<div class="col-lg-6 card-box">
+	
+		<h4 class="text-dark  header-title m-t-0">Mapa</h4>
+		<p class="text-muted m-b-25 font-13"></p>
+</div>
+
+<% if false %>
 <%= render 'form' %>
+<% end %>
 
 <%= link_to 'Back', modelagem_privacidades_path %>

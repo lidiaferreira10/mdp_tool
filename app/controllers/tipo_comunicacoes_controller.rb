@@ -24,17 +24,17 @@ class TipoComunicacoesController < ApplicationController
   # POST /tipo_comunicacoes
   # POST /tipo_comunicacoes.json
   def create
-    @tipo_comunicacao = TipoComunicacao.new(tipo_comunicacao_params)
+    #@tipo_comunicacao = TipoComunicacao.new(tipo_comunicacao_params)
 
-    respond_to do |format|
-      if @tipo_comunicacao.save
-        format.html { redirect_to @tipo_comunicacao, notice: 'Tipo comunicacao was successfully created.' }
-        format.json { render :show, status: :created, location: @tipo_comunicacao }
-      else
-        format.html { render :new }
-        format.json { render json: @tipo_comunicacao.errors, status: :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+    #  if @tipo_comunicacao.save
+    #    format.html { redirect_to @tipo_comunicacao, notice: 'Tipo comunicacao was successfully created.' }
+    #    format.json { render :show, status: :created, location: @tipo_comunicacao }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @tipo_comunicacao.errors, status: :unprocessable_entity }
+    #  end
+ #   end
   end
 
   # PATCH/PUT /tipo_comunicacoes/1
