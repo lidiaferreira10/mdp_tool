@@ -1,4 +1,6 @@
-<%= form_for(@modelagem_privacidade) do |f| %>
+
+ 	
+ 	<%= form_for(@modelagem_privacidade) do |f| %>
   <% if @modelagem_privacidade.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@modelagem_privacidade.errors.count, "error") %> prohibited this modelagem_privacidade from being saved:</h2>
@@ -11,14 +13,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+ <div class="field">
     <%= f.label :dimensoes_id %><br>
     <%= f.text_field :dimensoes_id %>
   </div>
   <div class="field">
     <%= f.label :valor_dimensoes_id %><br>
     <%= f.text_field :valor_dimensoes_id %>
-  </div>
+ </div> 
   <div class="field">
     <%= f.label :controle_privacidades_id %><br>
     <%= f.text_field :controle_privacidades_id %>

@@ -4,7 +4,13 @@ class ModelagemPrivacidadesController < ApplicationController
   # GET /modelagem_privacidades
   # GET /modelagem_privacidades.json
   def index
+    @modelo = Dimensao.new
+    @modelo = Dimensao.all
     @modelagem_privacidades = ModelagemPrivacidade.all
+   # @modelagem_privacidades.dimensoes = @modelo.first
+    
+    @modelagem_privacidades = Dimensao.where(:id => params[:id]).all
+
   end
 
   # GET /modelagem_privacidades/1
@@ -24,17 +30,17 @@ class ModelagemPrivacidadesController < ApplicationController
   # POST /modelagem_privacidades
   # POST /modelagem_privacidades.json
   def create
-    @modelagem_privacidade = ModelagemPrivacidade.new(modelagem_privacidade_params)
+#    @modelagem_privacidade = ModelagemPrivacidade.new(modelagem_privacidade_params)
 
-    respond_to do |format|
-      if @modelagem_privacidade.save
-        format.html { redirect_to @modelagem_privacidade, notice: 'Modelagem privacidade was successfully created.' }
-        format.json { render :show, status: :created, location: @modelagem_privacidade }
-      else
-        format.html { render :new }
-        format.json { render json: @modelagem_privacidade.errors, status: :unprocessable_entity }
-      end
-    end
+#    respond_to do |format|
+#      if @modelagem_privacidade.save
+#        format.html { redirect_to @modelagem_privacidade, notice: 'Modelagem privacidade was successfully created.' }
+#        format.json { render :show, status: :created, location: @modelagem_privacidade }
+#      else
+#        format.html { render :new }
+#        format.json { render json: @modelagem_privacidade.errors, status: :unprocessable_entity }
+#      end
+#    end
   end
 
   # PATCH/PUT /modelagem_privacidades/1
@@ -69,6 +75,6 @@ class ModelagemPrivacidadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def modelagem_privacidade_params
-      params.require(:modelagem_privacidade).permit(:dimensoes_id, :valor_dimensoes_id, :controle_privacidades_id, :tipo_comunicacoes_id)
+      params.require(:modelagem_privacidade).permit(:dimensoes, :dimensoes_id, :valor_dimensoes_id, :controle_privacidades_id, :tipo_comunicacoes_id)
     end
 end

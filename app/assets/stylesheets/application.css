@@ -9,7 +9,119 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+ * 
  *
  *= require_tree .
  *= require_self
  */
+
+
+/*Background */
+body {
+    background: #f5f5f5;
+    font-family: 'Noto Sans', sans-serif; */
+    /* color: #4c5667; */
+    padding-bottom: 61px;
+    /* overflow-x: hidden !important; */
+}
+
+/* Top Navigation */
+.navbar-inverse {
+    background-color: #485058;
+    border-color: #485058;
+}
+.navbar-inverse .navbar-brand {
+    color: #cbd0d4;
+}
+.top-nav {
+    padding: 0 15px;
+}
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #6D737A;
+}
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+li.message-footer {
+    margin: 5px 0;
+}
+ul.alert-dropdown {
+    width: 200px;
+}
+
+
+input.action{
+	width: 100%;
+	margin: 0 auto;
+}
+a.link{
+	color: #FFFFFF; 
+	float: right;
+}
+
+
+/*CSS da tabela de registro */
+.card-box {
+    padding: 20px;
+    border: 1px solid rgba(54, 64, 74, 0.08);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.m-t-0 {
+    margin-top: 0px;
+}
+.text-dark {
+    color: #797979 !important;
+}
+.header-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    margin-bottom: 8px;
+}
