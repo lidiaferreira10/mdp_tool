@@ -4,7 +4,13 @@ class TipoComunicacoesController < ApplicationController
   # GET /tipo_comunicacoes
   # GET /tipo_comunicacoes.json
   def index
+    @tipo_comunicacoes = TipoComunicacao.new 
     @tipo_comunicacoes = TipoComunicacao.all
+    
+    #@tipo_comunicacoes.analise_privacidade = @analise_privacidades
+    
+    #@tipo_comunicacoes.analise_privacidade = AnalisePrivacidade.where(:id => params[:id])
+    
   end
 
   # GET /tipo_comunicacoes/1
@@ -69,6 +75,6 @@ class TipoComunicacoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tipo_comunicacao_params
-      params.require(:tipo_comunicacao).permit(:Analise_Privacidade_id, :tipo_comunicacao, :observacao)
+      params.require(:tipo_comunicacao).permit(:analise_privacidade, :rede_social, :analise_privacidade_id, :tipo_comunicacao, :observacao)
     end
 end

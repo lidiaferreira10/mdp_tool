@@ -34,7 +34,7 @@
 				        <td><%= analise_privacidade.rede_social %></td>
 				        <td><%= analise_privacidade.url_rede_social %></td>
 				        <td><%= analise_privacidade.descricao_analise %></td>
-				        <td><%= link_to 'Modelar Privacidade', modelagem_privacidades_path, :class=>"text-right" %>
+				        <td>
 				        	<%= link_to 'Visualizar', analise_privacidade, :class=>"text-right" %>
 				        	<%= link_to 'Editar', edit_analise_privacidade_path(analise_privacidade), :class=>"text-right" %>
 				        	<%= link_to 'Excluir', analise_privacidade, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir essa análise?' }, :class=>"text-right" %></td>
