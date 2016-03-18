@@ -15,7 +15,7 @@
   <tbody>
     <% @tipo_comunicacoes.each do |tipo_comunicacao| %>
       <tr>
-        <td><%= tipo_comunicacao.analise_privacidade.rede_social %></td>
+        <td><%= tipo_comunicacao.analise_privacidade %></td>
         <td><%= tipo_comunicacao.tipo_comunicacao %></td>
         <td><%= tipo_comunicacao.observacao %></td>
         <td><%= link_to 'Show', tipo_comunicacao %></td>

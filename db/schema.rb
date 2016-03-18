@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218181503) do
+ActiveRecord::Schema.define(version: 20160318110153) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -120,14 +120,14 @@ ActiveRecord::Schema.define(version: 20160218181503) do
   add_index "recomendacao_valores", ["valor_dimensoes_id"], name: "index_recomendacao_valores_on_valor_dimensoes_id", using: :btree
 
   create_table "tipo_comunicacoes", force: :cascade do |t|
-    t.integer  "analise_privacidades_id", limit: 4
-    t.string   "tipo_comunicacao",        limit: 255
-    t.text     "observacao",              limit: 65535
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.integer  "analise_privacidade_id", limit: 4
+    t.string   "tipo_comunicacao",       limit: 255
+    t.text     "observacao",             limit: 65535
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
-  add_index "tipo_comunicacoes", ["analise_privacidades_id"], name: "index_tipo_comunicacoes_on_analise_privacidades_id", using: :btree
+  add_index "tipo_comunicacoes", ["analise_privacidade_id"], name: "index_tipo_comunicacoes_on_analise_privacidade_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

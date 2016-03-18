@@ -4,10 +4,16 @@ class TipoComunicacoesController < ApplicationController
   # GET /tipo_comunicacoes
   # GET /tipo_comunicacoes.json
   def index
-    @tipo_comunicacoes = TipoComunicacao.new 
+    #@tipo_comunicacoes = TipoComunicacao.new
+    #@tipo_comunicacoes.build_analise_privacidade
     @tipo_comunicacoes = TipoComunicacao.all
     
-    #@tipo_comunicacoes.analise_privacidade = @analise_privacidades
+    #@tipo_comunicacoes.build_analise_privacidade
+ 
+    
+    
+    
+    #@tipo_comunicacoes.analise_privacidade = AnalisePrivacidade.new
     
     #@tipo_comunicacoes.analise_privacidade = AnalisePrivacidade.where(:id => params[:id])
     
@@ -30,17 +36,17 @@ class TipoComunicacoesController < ApplicationController
   # POST /tipo_comunicacoes
   # POST /tipo_comunicacoes.json
   def create
-    #@tipo_comunicacao = TipoComunicacao.new(tipo_comunicacao_params)
+    @tipo_comunicacao = TipoComunicacao.new(tipo_comunicacao_params)
 
-    #respond_to do |format|
-    #  if @tipo_comunicacao.save
-    #    format.html { redirect_to @tipo_comunicacao, notice: 'Tipo comunicacao was successfully created.' }
-    #    format.json { render :show, status: :created, location: @tipo_comunicacao }
-    #  else
-    #    format.html { render :new }
-    #    format.json { render json: @tipo_comunicacao.errors, status: :unprocessable_entity }
-    #  end
- #   end
+    respond_to do |format|
+      if @tipo_comunicacao.save
+        format.html { redirect_to @tipo_comunicacao, notice: 'Tipo comunicacao was successfully created.' }
+        format.json { render :show, status: :created, location: @tipo_comunicacao }
+      else
+        format.html { render :new }
+        format.json { render json: @tipo_comunicacao.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /tipo_comunicacoes/1
@@ -75,6 +81,7 @@ class TipoComunicacoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tipo_comunicacao_params
-      params.require(:tipo_comunicacao).permit(:analise_privacidade, :rede_social, :analise_privacidade_id, :tipo_comunicacao, :observacao)
+      #params.require(:tipo_comunicacao).permit(:analise_privacidade_attributes, :rede_social, :analise_privacidades_id, :tipo_comunicacao, :observacao)
+       params.require(:tipo_comunicacao).permit!
     end
 end

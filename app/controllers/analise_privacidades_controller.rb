@@ -14,7 +14,12 @@ class AnalisePrivacidadesController < ApplicationController
 
   # GET /analise_privacidades/new
   def new
+    
     @analise_privacidade = AnalisePrivacidade.new
+    
+    3.times { tipo_comunicacao = @analise_privacidade.tipo_comunicacoes.build }
+    
+    
   end
 
   # GET /analise_privacidades/1/edit
@@ -25,6 +30,10 @@ class AnalisePrivacidadesController < ApplicationController
   # POST /analise_privacidades.json
   def create
     @analise_privacidade = AnalisePrivacidade.new(analise_privacidade_params)
+    
+    
+    
+    
 
     respond_to do |format|
       if @analise_privacidade.save
@@ -69,6 +78,14 @@ class AnalisePrivacidadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def analise_privacidade_params
-      params.require(:analise_privacidade).permit(:rede_social, :url_rede_social, :descricao_analise)
+      #params.require(:analise_privacidade).permit(:rede_social, :url_rede_social, :descricao_analise, tipo_coumunicacoes_attributes: [:id, :tipo_comunicacao, :observacao])
+      
+      
+      params.require(:analise_privacidade).permit!
+      
+      
+      
+      
+      
     end
 end
