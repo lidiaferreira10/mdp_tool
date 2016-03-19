@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tipo Comunicacoes</h1>
+<h1>Tipos de Comunicação do <%= @tipo_comunicacoes.first.analise_privacidade.rede_social %></h1>
 
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
-      <th>Analise privacidade</th>
-      <th>Tipo comunicacao</th>
-      <th>Observacao</th>
+      <th>Tipo Comunicacao</th>
+      <th>Observação</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,12 +14,11 @@
   <tbody>
     <% @tipo_comunicacoes.each do |tipo_comunicacao| %>
       <tr>
-        <td><%= tipo_comunicacao.analise_privacidade %></td>
         <td><%= tipo_comunicacao.tipo_comunicacao %></td>
         <td><%= tipo_comunicacao.observacao %></td>
-        <td><%= link_to 'Show', tipo_comunicacao %></td>
-        <td><%= link_to 'Edit', edit_tipo_comunicacao_path(tipo_comunicacao) %></td>
-        <td><%= link_to 'Destroy', tipo_comunicacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', tipo_comunicacao %></td>
+        <td><%= link_to 'Editar', edit_tipo_comunicacao_path(tipo_comunicacao) %></td>
+        <td><%= link_to 'Excluir', tipo_comunicacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Tipo comunicacao', new_tipo_comunicacao_path %>
+<%= link_to 'Novo Tipo de Comunicação', new_tipo_comunicacao_path(@tipo_comunicacoes.first.analise_privacidade) %>

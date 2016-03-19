@@ -1,8 +1,6 @@
 <div class="row">
 	<div class="col-lg-12">
 		<p id="notice"><%= notice %></p>
-	
-		<h1>Visualização da Análise</h1>
 	</div>
 </div>
 <div class="row">
@@ -39,7 +37,7 @@
 				
 				
 				
-				<%= link_to 'Tipos de Comunicação', tipo_comunicacoes_path, :class=>"text-right" %>
+				<%= link_to 'Tipos de Comunicação', tipo_comunicacoes_path(@analise_privacidade), :class=>"text-right" %>
 				<%= link_to 'Editar', edit_analise_privacidade_path(@analise_privacidade) %> |
 				<%= link_to 'Voltar', analise_privacidades_path %>
 				
