@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318110153) do
+ActiveRecord::Schema.define(version: 20160320230659) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -91,16 +91,16 @@ ActiveRecord::Schema.define(version: 20160318110153) do
   add_index "historico_analises", ["users_id"], name: "index_historico_analises_on_users_id", using: :btree
 
   create_table "modelagem_privacidades", force: :cascade do |t|
-    t.integer  "dimensoes_id",             limit: 4
-    t.integer  "controle_privacidades_id", limit: 4
-    t.integer  "tipo_comunicacoes_id",     limit: 4
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.integer  "dimensao_id",             limit: 4
+    t.integer  "controle_privacidade_id", limit: 4
+    t.integer  "tipo_comunicacao_id",     limit: 4
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
-  add_index "modelagem_privacidades", ["controle_privacidades_id"], name: "index_modelagem_privacidades_on_controle_privacidades_id", using: :btree
-  add_index "modelagem_privacidades", ["dimensoes_id"], name: "index_modelagem_privacidades_on_dimensoes_id", using: :btree
-  add_index "modelagem_privacidades", ["tipo_comunicacoes_id"], name: "index_modelagem_privacidades_on_tipo_comunicacoes_id", using: :btree
+  add_index "modelagem_privacidades", ["controle_privacidade_id"], name: "index_modelagem_privacidades_on_controle_privacidade_id", using: :btree
+  add_index "modelagem_privacidades", ["dimensao_id"], name: "index_modelagem_privacidades_on_dimensao_id", using: :btree
+  add_index "modelagem_privacidades", ["tipo_comunicacao_id"], name: "index_modelagem_privacidades_on_tipo_comunicacao_id", using: :btree
 
   create_table "nivel_privacidades", force: :cascade do |t|
     t.string   "nivel_privacidade", limit: 255, null: false

@@ -4,9 +4,9 @@
 	<div class="col-lg-6">
 		<p id="notice"><%= notice %></p>
 		
-		<%= link_to 'Nova Comunicação', new_modelagem_privacidade_path, :class=>"btn-lg btn-success action link" %>
+		<%= link_to 'Nova Modelagem', new_modelagem_privacidade_path, :class=>"btn-lg btn-success action link" %>
 		
-		<h1>Minhas Modelagens de Privacidade</h1>
+		<h1>Modelagem de Privacidade</h1>
 		
 	</div>	
 </div>
@@ -36,9 +36,9 @@
 			        <td><%= modelagem_privacidade.id %></td>
 			        <td><%= modelagem_privacidade.controle_privacidades_id %></td>
 			        <td><%= modelagem_privacidade.tipo_comunicacoes_id %></td>
-			        <td><%= link_to 'Show', modelagem_privacidade %></td>
-			        <td><%= link_to 'Edit', edit_modelagem_privacidade_path(modelagem_privacidade) %></td>
-			        <td><%= link_to 'Destroy', modelagem_privacidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			        <td><%= link_to 'Visualizar', modelagem_privacidade %></td>
+			        <td><%= link_to 'Editar', edit_modelagem_privacidade_path(modelagem_privacidade) %></td>
+			        <td><%= link_to 'Excluir', modelagem_privacidade, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
 			      </tr>
 			    <% end %>
 			  </tbody>
@@ -48,6 +48,3 @@
 		
 	</div>
 </div>
-
-
-<p>ta tudo comentado</p>

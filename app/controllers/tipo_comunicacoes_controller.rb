@@ -14,11 +14,19 @@ class TipoComunicacoesController < ApplicationController
 
   # GET /tipo_comunicacoes/new
   def new
+  
+    
     @tipo_comunicacao = TipoComunicacao.new
-    @tipo_comunicacao.build_analise_privacidade
+    @tipo_comunicacao.build_analise_privacidade(:id => params[:analise_privacidade_id].to_i)
     
     
-    #render :text => @tipo_comunicacao.analise_privacidade.inspect
+    #@tipo_comunicacao.analise_privacidade_build
+    
+    8.times {
+      @tipo_comunicacao.modelagem_privacidades.build  
+    }
+    
+    #render :text => params[:analise_privacidade_id].to_i
     
   end
 

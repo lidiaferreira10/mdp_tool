@@ -15,7 +15,7 @@
     <% @tipo_comunicacoes.each do |tipo_comunicacao| %>
       <tr>
         <td><%= tipo_comunicacao.tipo_comunicacao %></td>
-        <td><%= tipo_comunicacao.observacao %></td>
+        <td><%= tipo_comunicacao.observacao %>
         <td><%= link_to 'Visualizar', tipo_comunicacao %></td>
         <td><%= link_to 'Editar', edit_tipo_comunicacao_path(tipo_comunicacao) %></td>
         <td><%= link_to 'Excluir', tipo_comunicacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Novo Tipo de Comunicação', new_tipo_comunicacao_path(@tipo_comunicacoes.first.analise_privacidade) %>
+<%= link_to 'Novo Tipo de Comunicação', new_tipo_comunicacao_path(:analise_privacidade_id => @tipo_comunicacoes.first.analise_privacidade.id) %>

@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :analise_privacidade_id %><br>
-    <%= f.text_field :analise_privacidade_id, :value => params[:format].to_i %>
+    <%= f.text_field :analise_privacidade_id, :value => @tipo_comunicacao.analise_privacidade.id %>
   </div>
   
   
@@ -25,7 +25,60 @@
     <%= f.label :observacao %><br>
     <%= f.text_area :observacao %>
   </div>
+  
+  
+ <div class="col-lg-6 card-box"> 
+ 	
+ 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+ 	
+	<%= f.fields_for :modelagem_privacidades do |builder| %>
+	
+	
+		<div class="panel panel-default">
+ 			
+ 			<div class="panel-heading" role="tab" id="headingOne">
+ 				<h4 class="panel-title">
+ 					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 
+ 						<%= Dimensao.where(:id => (builder.index + 1)).pluck(:nome_dimensao).first %><br />								
+						<%= builder.hidden_field :dimensao_id, :value => (builder.index + 1)  %>
+ 					</a>
+ 				</h4>
+ 			</div>
+ 			
+ 			
+ 			<div id="collapseOne" class="panel-collapse" role="tabpanel" aria-labelledby="headingOne">
+ 				
+ 				<div class="panel-body">
+ 					
+ 					<div class="input-group">
+ 						<%= builder.label :tipo_comunicacao_id %> <br />
+						<%= builder.text_field :tipo_comunicacao_id %>
+ 					</div>
+ 					
+ 					
+ 					<div class="input-group">
+ 						
+ 						<%= builder.label :controle_privacidade_id %> <br />						
+						<%= builder.collection_select(:controle_privacidade_id, ControlePrivacidade.all, :id, :controle) %>
+						
+ 					</div>
+
+ 				</div>
+ 				
+ 			</div>
+ 		
+ 		</div>
+
+	<% end %>
+  </div>
+ </div>
+
+
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
+  
+  
 <% end %>
