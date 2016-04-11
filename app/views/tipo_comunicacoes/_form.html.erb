@@ -16,7 +16,6 @@
     <%= f.text_field :analise_privacidade_id, :value => @tipo_comunicacao.analise_privacidade.id %>
   </div>
   
-  
   <div class="field">
     <%= f.label :tipo_comunicacao %><br>
     <%= f.text_field :tipo_comunicacao %>
@@ -28,14 +27,12 @@
   
   
  <div class="col-lg-6 card-box"> 
- 	
  	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
  	
 	<%= f.fields_for :modelagem_privacidades do |builder| %>
-	
-	
+
 		<div class="panel panel-default">
- 			
+ 
  			<div class="panel-heading" role="tab" id="headingOne">
  				<h4 class="panel-title">
  					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 

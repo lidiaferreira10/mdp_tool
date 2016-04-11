@@ -18,7 +18,7 @@
 
 /*Background */
 body {
-    background: #f5f5f5;
+    background: #ffffff;
     font-family: 'Noto Sans', sans-serif; */
     /* color: #4c5667; */
     padding-bottom: 61px;
@@ -27,7 +27,8 @@ body {
 
 /* Top Navigation */
 .navbar-inverse {
-    background-color: #485058;
+    /* background-color: #485058;*/
+    background-color: #000000;
     border-color: #485058;
 }
 .navbar-inverse .navbar-brand {
@@ -109,13 +110,14 @@ a.link{
     -moz-border-radius: 5px;
     background-clip: padding-box;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #f5f5f5;
 }
 .m-t-0 {
     margin-top: 0px;
 }
 .text-dark {
-    color: #797979 !important;
+    color: #000000 !important;
+    /*color: #797979 !important;*/
 }
 .header-title {
     text-transform: uppercase;
