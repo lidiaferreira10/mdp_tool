@@ -26,9 +26,13 @@ body {
 }
 
 /* Top Navigation */
+
+
+
 .navbar-inverse {
-    /* background-color: #485058;*/
-    background-color: #000000;
+	background-color: #08306b;
+   /* background-color: #485058;
+     background-color: #000000;*/
     border-color: #485058;
 }
 .navbar-inverse .navbar-brand {
@@ -127,3 +131,5 @@ a.link{
     line-height: 16px;
     margin-bottom: 8px;
 }
+
+

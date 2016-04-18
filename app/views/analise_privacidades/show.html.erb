@@ -6,9 +6,9 @@
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
 		
-		<div class="panel panel-default">
+		<div class="panel panel-info">
 			<div class="panel-heading text-center"
-				<h4 class="panel-title"><strong><%= @analise_privacidade.rede_social %></strong></h4>
+				<h4 class="panel-i"><strong><%= @analise_privacidade.rede_social %></strong></h4>
 			</div>
 			<div class="panel-body">
 
@@ -35,14 +35,21 @@
 				</ol>
 				
 				
-				
-				
-				<%= link_to 'Tipos de Comunicação', tipo_comunicacoes_path(@analise_privacidade), :class=>"text-right" %>
-				<%= link_to 'Editar', edit_analise_privacidade_path(@analise_privacidade) %> |
-				<%= link_to 'Voltar', analise_privacidades_path %>
-				
+				<%= link_to 'Tipos de Comunicação', tipo_comunicacoes_path(@analise_privacidade), :class=>"text-right" %>			
 			</div>
 		</div>
-		
+	</div>
+</div>	
+<div class="row">
+	<div class="col-md-offset-2 col-md-4" >
+		<div id="options-form" class="actions">
+			<%= link_to 'Voltar',  analise_privacidades_path, :class=>"btn btn-default" %>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div id="options-form" class="actions">
+			<%= link_to 'Editar', edit_analise_privacidade_path(@analise_privacidade), :class=>"btn btn-primary pull-right" %>
+		</div>
 	</div>
 </div>
+
