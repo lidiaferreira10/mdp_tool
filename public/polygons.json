@@ -1,56 +1,73 @@
 {
   "pdm": [{
-    "id": "II1",
-    "name": "dimensao-1",
+  	"ordem": "1",
+  	"id": "IS4",
+    "sigla": "Conteúdo",
+    "name": "Conteúdo da Informação",
     "translade_x": 150,
     "translade_y": 0
     },
     {
-    
+    "ordem": "2",
     "id": "CS2",
-    "name": "dimensao-2",
+    "sigla": "Espaço",
+    "name": "Espaço de Comunicação",
     "translade_x": 74,
     "translade_y": 44
     },
     {
-    "id": "AU3",
-    "name": "dimensao-3",
+    "ordem": "3",
+    "id": "TP8",
+    "sigla": "PTemp",
+    "name": "Persistência Temporal",
     "translade_x": 225,
     "translade_y": 44
     },
     {
-    "id": "IS4",
-    "name": "dimensao-4",
+    "ordem": "4",
+    "id": "II1",
+    "sigla": "Fonte",
+    "name": "Fonte de Informação",
     "translade_x": 0,
     "translade_y": 89
    },
     {
+    "ordem": "5",
     "id": "NUL",
-    "name": "dimensao-5",
+    "sigla": "Tipo de Comunicação",
+    "name": "",
     "translade_x": 150,
     "translade_y": 88
     },
     {
-	"id": "ID6",
-    "name": "dimensao-6",
+    "ordem": "6",
+    "id": "AU3",
+    "sigla": "Audien",
+    "name": "Audiência",
     "translade_x": 300,
     "translade_y": 88
     },
     {
+    "ordem": "7",
     "id": "NO7",
-    "name": "dimensao-7",
+    "sigla": "Notif",
+    "name": "Notificação",
     "translade_x": 74,
     "translade_y": 132
     },
     {
-    "id": "TP8",
-    "name": "dimensao-8",
+    "ordem": "8",
+    "id": "ID6",
+    "sigla": "Dissem",
+    "name": "Disseminação da Informação",
     "translade_x": 225,
     "translade_y": 132
     },
     {
+    "ordem": "9",
     "id": "SS9",
-    "name": "dimensao-9",
+    "sigla": "DiscSis",
+    "name": "Discurso do Sistema",
     "translade_x": 150,
     "translade_y": 175
     }
