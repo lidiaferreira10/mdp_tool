@@ -18,11 +18,7 @@
 		<div class="col-lg-7" >
 			<!--Titulo-->
 			
-			<h3>
-			<div id="nome_tipo_comunicacao" class="field">
-				<%= f.label :tipo_comunicacao, :value=>"Nome da comunicação" %>
-				<%= f.text_field :tipo_comunicacao, :class=>"form-control" %>
-			</div></h3>
+			<h2>Cadastro de Nova Comunicação</h2>
 		</div>
 		
 	</div>
@@ -54,47 +50,47 @@
 
 
 	<div class="col-lg-5" >
+		
+		<div id="nome_tipo_comunicacao" class="field">
+				<%= f.label :tipo_comunicacao, :value=>"Nome da comunicação" %>
+				<%= f.text_field :tipo_comunicacao, :class=>"form-control" %>
+			</div>
+		
 		<div id="forms-colmeia">
 				
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-
-				<%= f.fields_for :modelagem_privacidades do |builder| %>
+			<div id="accordion" role="tablist" aria-multiselectable="true">
 
 				<div class="panel panel-info">
-
-					<div class="panel-heading" role="tab" id="headingOne">
+				<%= f.fields_for :modelagem_privacidades do |builder| %>
+				
+					<div class="panel-heading" role="tab" id=<%="heading-"+(builder.index + 1).to_s%> >
 						<h4 class="panel-title">
-							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse" aria-expanded="false" aria-controls="collapse"> 
+							<a data-toggle="collapse" data-parent="#accordion" href=<%="#collapse-"+(builder.index + 1).to_s%> aria-expanded="true" aria-controls=<%="collapse-"+(builder.index + 1).to_s%>> 
 								<%= Dimensao.where(:id => (builder.index + 1)).pluck(:nome_dimensao).first %>
 								<br />
 								<%= builder.hidden_field :dimensao_id, :value => (builder.index + 1)  %> 
 							</a>
 						</h4>
 					</div>
-
-					<div id="collapse" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-						<div class="row">
-							<div class="panel-body">
-								<div class="col-lg-6" >
-									<div class="input-group">
-										<%= builder.label :tipo_comunicacao_id %>
-										<%= builder.text_field :tipo_comunicacao_id %>
-									</div>
-								</div>
-								<div class="col-lg-6" >
-									<div class="input-group">
-										<%= builder.label :controle_privacidade_id %>
-										<%= builder.collection_select(:controle_privacidade_id, ControlePrivacidade.all, :id, :controle) %>
-									</div>
-								</div>
+					<div id=<%="collapse-"+(builder.index + 1).to_s%> class="panel-collapse collapse" role="tabpanel" aria-labelledby=<%="heading-"+(builder.index + 1).to_s%>>
+					<div class="panel-body">
+						<div class="col-lg-6" >
+							<div class="input-group">
+								<%= builder.label :tipo_comunicacao_id %>
+								<%= builder.text_field :tipo_comunicacao_id, :value => (builder.index + 1) %>
 							</div>
 						</div>
-					</div>
+						<div class="col-lg-6" >
+							<div class="input-group">
+								<%= builder.label :controle_privacidade_id %>
+								<%= builder.collection_select(:controle_privacidade_id, ControlePrivacidade.all, :id, :controle) %>
+							</div>
+						</div>
+					</div>	
 				</div>
-
 				<% end %>
 			</div>
-
+			</div>
 		</div>
 	</div>
 	<div class="col-lg-5" >

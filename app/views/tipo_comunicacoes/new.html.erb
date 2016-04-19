@@ -152,6 +152,30 @@
 	}
 	
 	function atualizaLevel(dimensao, valor){
+		
+		//para corrigir o id recebido
+		if(dimensao == 1)
+			dimensao = "II"+dimensao;
+		else if(dimensao == 2)
+			dimensao = "CS"+dimensao;	
+		else if(dimensao == 3)
+			dimensao = "AU"+dimensao;
+		else if(dimensao == 4)
+			dimensao = "IS"+dimensao;	
+		else if(dimensao == 5)
+			dimensao = "CS"+dimensao;
+		else if(dimensao == 6)
+			dimensao = "ID"+dimensao;
+		else if(dimensao == 7)
+			dimensao = "NO"+dimensao;
+		else if(dimensao == 8)
+			dimensao = "TP"+dimensao;
+		else if(dimensao == 9)
+			dimensao = "SS"+dimensao;
+		
+		console.log("caso especial:", dimensao);
+		console.log("sou a dimensao:", dimensao);
+		
 		var hexagono = d3.select('#' + dimensao);
 		var hexagonoSemFoco = d3.selectAll('path:not(#' + dimensao + ')');
 		var tipoLinha;
@@ -193,13 +217,20 @@
 	$("select").change(function(){		
 		console.log("OLA ENTREI NO SELECT: ");	
 		var tipo = $(this).attr("id");
-		var campos = tipo.split("-");
+		console.log(tipo);
+		var campos = tipo.split("_");
+		console.log(campos[6]);
 		var valor;
 		
-		if(campos[1] == "group"){
+		if(campos[6] == "controle"){
 			//valor = $(this).val();
 			valor = $(this).val();
-			atualizaGroup(campos[0], valor);
+			console.log(valor);
+			
+			var dimensao = parseInt(campos[5])+1;
+			console.log("sou a dimensao por parse", dimensao);
+			
+			atualizaLevel(dimensao, valor);
 		} else {
 			valor = $(this).val();
 			atualizaLevel(campos[0], valor);
