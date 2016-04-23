@@ -1,19 +1,9 @@
 var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
     .range(["#FFF", "#EFF3FF","#BDD7E7","#6BAED6","#3182BD","#08519C", "#CCCCCC"]);
     
-	$(document).on("page:load", function() {
+$(document).on("page:load", function() { CriaVisualizacao(); });	
+$(document).on("page:update", function() { CriaVisualizacao(); });
 		
-		CriaVisualizacao();
-		
-		
-		
-		
-	});
-	
-	
-	
-	
-	
 	
 	function CriaVisualizacao() {
 		CriaLegenda();
@@ -21,22 +11,7 @@ var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 
 	function CriaColmeias(idContainer) {
@@ -230,7 +205,7 @@ var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
 			});
 		}
 	
-	$("select").change(function(){		
+	$(document).on("change", "select", function(){		
 		console.log("OLA ENTREI NO SELECT: ");	
 		var tipo = $(this).attr("id");
 		console.log(tipo);
@@ -254,7 +229,7 @@ var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
 	});
 
 
-	$(".panel").on('mouseleave', function(){	
+	$(document).on('mouseleave', ".panel", function(){	
 		d3.selectAll('path')
 			.transition()
 			.duration(1250)
@@ -266,10 +241,11 @@ var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
 		console.log(sel);	
 	});
 	
-	function CriaLegenda(){
+function CriaLegenda(){
+	
 	var widthLegenda = 210,
 	    heightLegenda = 60,
-	svgLegenda = d3.select("#container-legenda-edit")
+		svgLegenda = d3.select("#container-legenda-edit")
 			.append("svg")
 			.attr("preserveAspectRatio", "xMinYMin meet")	// Way to Go!! 
 	    	.attr("viewBox","0 0 " + widthLegenda + " " + heightLegenda)  // Essas duas linhas deixam os gráficos reponsivos! =D
