@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # D3.js file
-gem 'd3-rails', '~> 3.5', '>= 3.5.16'
+gem 'd3_rails', '~> 3.5', '>= 3.5.16'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

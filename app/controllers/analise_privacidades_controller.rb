@@ -17,13 +17,14 @@ class AnalisePrivacidadesController < ApplicationController
     
     @analise_privacidade = AnalisePrivacidade.new
     
-    3.times { tipo_comunicacao = @analise_privacidade.tipo_comunicacoes.build }
+    #3.times { tipo_comunicacao = @analise_privacidade.tipo_comunicacoes.build }
     
     
   end
 
   # GET /analise_privacidades/1/edit
   def edit
+    
   end
 
   # POST /analise_privacidades

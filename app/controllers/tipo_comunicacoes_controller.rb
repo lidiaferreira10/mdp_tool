@@ -3,8 +3,13 @@ class TipoComunicacoesController < ApplicationController
 
   # GET /tipo_comunicacoes
   # GET /tipo_comunicacoes.json
-  def index
-    @tipo_comunicacoes = TipoComunicacao.where(:analise_privacidade_id =>  params[:format].to_i)    
+  def index 
+    @tipo_comunicacoes = TipoComunicacao.where(:analise_privacidade_id =>  params[:format].to_i) 
+    
+    
+    #render :text => params[:format].to_i
+    
+       
   end
 
   # GET /tipo_comunicacoes/1
@@ -14,24 +19,20 @@ class TipoComunicacoesController < ApplicationController
 
   # GET /tipo_comunicacoes/new
   def new
-  
     
     @tipo_comunicacao = TipoComunicacao.new
-    @tipo_comunicacao.build_analise_privacidade(:id => params[:analise_privacidade_id].to_i)
+    @tipo_comunicacao.build_analise_privacidade(:id => params[:format].to_i)
+  
+  
+    8.times { @tipo_comunicacao.modelagem_privacidades.build }
     
-    
-    #@tipo_comunicacao.analise_privacidade_build
-    
-    8.times {
-      @tipo_comunicacao.modelagem_privacidades.build  
-    }
-    
-    #render :text => params[:analise_privacidade_id].to_i
+    #render :text => params[:format].to_i
     
   end
 
   # GET /tipo_comunicacoes/1/edit
   def edit
+   
   end
 
   # POST /tipo_comunicacoes

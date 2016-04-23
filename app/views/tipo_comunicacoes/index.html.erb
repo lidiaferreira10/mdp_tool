@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tipos de Comunicação do <%= @tipo_comunicacoes.first.analise_privacidade.rede_social %></h1>
+<h1>Tipos de Comunicação</h1>
+
+<%= link_to 'Novo Tipo Comunicação', new_tipo_comunicacao_path(@tipo_comunicacoes), :class=>"btn-lg btn-primary action link" %>
 
 <table class="table table-responsive">
   <thead>
@@ -24,6 +26,6 @@
   </tbody>
 </table>
 
-<br>
+<br />
 
-<%= link_to 'Novo Tipo de Comunicação', new_tipo_comunicacao_path(:analise_privacidade_id => @tipo_comunicacoes.first.analise_privacidade.id) %>
+ <%= link_to 'Voltar', analise_privacidades_path(@tipo_comunicacoes), :class => "btn btn-default" %>  
