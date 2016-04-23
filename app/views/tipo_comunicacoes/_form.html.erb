@@ -18,11 +18,11 @@
 
 <div class="row">
 	<div class="col-lg-7" >
-		<%= f.text_field :analise_privacidade_id, :value => @tipo_comunicacao.analise_privacidade.id %>
+		<%= f.hidden_field :analise_privacidade_id, :value => @tipo_comunicacao.analise_privacidade.id %>
 		<!--colmeia-->
 		<div class="panel">
 			<div class="panel-body">
-				<div id="comunicacao-1" class="container-grafico"></div>
+				<div id="container-visualizacao" class="container-grafico"></div>
 			</div>
 		</div>
 		<!--legenda-->
@@ -81,8 +81,8 @@
 	</div>
 	<div class="col-lg-5" >
 			<div class="field">
-				<%= f.label :observacao, :value=>@tipo_comunicacoes.class %>
-				<br>
+				<%= f.label :observacao, :value=> "Observação" %>
+				<br />
 				<%= f.text_area :observacao, :class=>"form-control", :rows=>"5"  %>
 			</div>
 		</div>

@@ -1,11 +1,43 @@
 var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
     .range(["#FFF", "#EFF3FF","#BDD7E7","#6BAED6","#3182BD","#08519C", "#CCCCCC"]);
     
-	$(document).ready(function() {
-		console.log("ready!");
-		CriaLegenda();
-		CriaColmeias("#comunicacao-1");
+	$(document).on("page:load", function() {
+		
+		CriaVisualizacao();
+		
+		
+		
+		
 	});
+	
+	
+	
+	
+	
+	
+	function CriaVisualizacao() {
+		CriaLegenda();
+		CriaColmeias("#container-visualizacao");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	function CriaColmeias(idContainer) {
 		var width = 428,
@@ -14,7 +46,7 @@ var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
 				.attr("viewBox", "0 0 " + width + " " + height)// Essas duas linhas deixam os gráficos reponsivos! =D
 				.append('svg:g');
 
-		d3.json("/polygons.json", function(data) {
+		d3.json("/data/polygons.json", function(data) {
 			var dimensoes = data.pdm;
 			
 			dimensoes.forEach(function(d) {
