@@ -2,7 +2,7 @@
 
 <h1>Tipos de Comunicação</h1>
 
-<%= link_to 'Novo Tipo Comunicação', new_tipo_comunicacao_path(@tipo_comunicacoes), :class=>"btn-lg btn-primary action link" %>
+<%= link_to 'Novo Tipo Comunicação', new_tipo_comunicacao_path(AnalisePrivacidade.where(:id => params[:format].to_i).pluck(:id).first), :class=>"btn-lg btn-primary action link" %>
 
 <table class="table table-responsive">
   <thead>

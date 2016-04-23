@@ -4,10 +4,14 @@ class TipoComunicacoesController < ApplicationController
   # GET /tipo_comunicacoes
   # GET /tipo_comunicacoes.json
   def index 
+    
+    
+    @tipo_comunicacoes = TipoComunicacao.new
+    
     @tipo_comunicacoes = TipoComunicacao.where(:analise_privacidade_id =>  params[:format].to_i) 
     
     
-    #render :text => params[:format].to_i
+    #render :text =>  @tipo_comunicacoes.size()
     
        
   end
@@ -21,12 +25,14 @@ class TipoComunicacoesController < ApplicationController
   def new
     
     @tipo_comunicacao = TipoComunicacao.new
+    @tipo_comunicacao.build_analise_privacidade
+    
     @tipo_comunicacao.build_analise_privacidade(:id => params[:format].to_i)
   
   
     8.times { @tipo_comunicacao.modelagem_privacidades.build }
     
-    #render :text => params[:format].to_i
+    #render :text => params
     
   end
 
@@ -83,7 +89,7 @@ class TipoComunicacoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tipo_comunicacao_params
-      #params.require(:tipo_comunicacao).permit(:analise_privacidade_attributes, :rede_social, :analise_privacidades_id, :tipo_comunicacao, :observacao)
-       params.require(:tipo_comunicacao).permit!
+        #params.require(:tipo_comunicacao).permit(:analise_privacidade_attributes, :rede_social, :analise_privacidades_id, :tipo_comunicacao, :observacao)
+         params.require(:tipo_comunicacao).permit!
     end
 end
