@@ -1,7 +1,7 @@
 var color = d3.scale.ordinal().domain([0, 1, 2, 3, 4, 5, -1])
     .range(["#FFF", "#EFF3FF","#BDD7E7","#6BAED6","#3182BD","#08519C", "#CCCCCC"]);
     
-$(document).on("page:load", function() { CriaVisualizacao(); });	
+//$(document).on("page:load", function() { CriaVisualizacao(); });	
 $(document).on("page:update", function() { CriaVisualizacao(); });
 		
 	

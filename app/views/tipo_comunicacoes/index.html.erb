@@ -20,7 +20,7 @@
         <td><%= tipo_comunicacao.observacao %>
         <td><%= link_to 'Visualizar', tipo_comunicacao %></td>
         <td><%= link_to 'Editar', edit_tipo_comunicacao_path(tipo_comunicacao) %></td>
-        <td><%= link_to 'Excluir', tipo_comunicacao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td><%= link_to 'Excluir', tipo_comunicacao_path(:id => tipo_comunicacao.id, :analise_privacidade_id => tipo_comunicacao.analise_privacidade.id), method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -74,9 +74,14 @@ class TipoComunicacoesController < ApplicationController
   # DELETE /tipo_comunicacoes/1
   # DELETE /tipo_comunicacoes/1.json
   def destroy
+    
+    @analise_privacidade = @tipo_comunicacao.analise_privacidade_id
+    
+    #render :text => @privacidadetipo_comunicacoes_url
+    
     @tipo_comunicacao.destroy
     respond_to do |format|
-      format.html { redirect_to tipo_comunicacoes_url, notice: 'Tipo comunicacao was successfully destroyed.' }
+      format.html { redirect_to tipo_comunicacoes_path(@analise_privacidade), notice: 'Tipo comunicacao was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
