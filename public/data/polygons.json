@@ -1,7 +1,7 @@
 {
   "pdm": [{
   	"ordem": "1",
-  	"id": "IS4",
+  	"id": "IS1",
     "sigla": "Conteúdo",
     "name": "Conteúdo da Informação",
     "translade_x": 150,
@@ -17,7 +17,7 @@
     },
     {
     "ordem": "3",
-    "id": "TP8",
+    "id": "TP3",
     "sigla": "PTemp",
     "name": "Persistência Temporal",
     "translade_x": 225,
@@ -25,14 +25,14 @@
     },
     {
     "ordem": "4",
-    "id": "II1",
+    "id": "II4",
     "sigla": "Fonte",
     "name": "Fonte de Informação",
     "translade_x": 0,
     "translade_y": 89
    },
     {
-    "ordem": "5",
+    "ordem": "9",
     "id": "NUL",
     "sigla": "Tipo de Comunicação",
     "name": "",
@@ -40,32 +40,32 @@
     "translade_y": 88
     },
     {
-    "ordem": "6",
-    "id": "AU3",
+    "ordem": "5",
+    "id": "AU5",
     "sigla": "Audien",
     "name": "Audiência",
     "translade_x": 300,
     "translade_y": 88
     },
     {
-    "ordem": "7",
-    "id": "NO7",
+    "ordem": "6",
+    "id": "NO6",
     "sigla": "Notif",
     "name": "Notificação",
     "translade_x": 74,
     "translade_y": 132
     },
     {
-    "ordem": "8",
-    "id": "ID6",
+    "ordem": "7",
+    "id": "ID7",
     "sigla": "Dissem",
     "name": "Disseminação da Informação",
     "translade_x": 225,
     "translade_y": 132
     },
     {
-    "ordem": "9",
-    "id": "SS9",
+    "ordem": "8",
+    "id": "SS8",
     "sigla": "DiscSis",
     "name": "Discurso do Sistema",
     "translade_x": 150,

@@ -9,10 +9,6 @@ $(document).on("page:update", function() { CriaVisualizacao(); });
 		CriaLegenda();
 		CriaColmeias("#container-visualizacao");
 	}
-	
-	
-
-	
 
 	function CriaColmeias(idContainer) {
 		var width = 428,
@@ -146,22 +142,20 @@ $(document).on("page:update", function() { CriaVisualizacao(); });
 		
 		//para corrigir o id recebido
 		if(dimensao == 1)
-			dimensao = "II"+dimensao;
+			dimensao = "IS"+dimensao;
 		else if(dimensao == 2)
 			dimensao = "CS"+dimensao;	
 		else if(dimensao == 3)
-			dimensao = "AU"+dimensao;
-		else if(dimensao == 4)
-			dimensao = "IS"+dimensao;	
-		else if(dimensao == 5)
-			dimensao = null;
-		else if(dimensao == 6)
-			dimensao = "ID"+dimensao;
-		else if(dimensao == 7)
-			dimensao = "NO"+dimensao;
-		else if(dimensao == 8)
 			dimensao = "TP"+dimensao;
-		else if(dimensao == 9)
+		else if(dimensao == 4)
+			dimensao = "II"+dimensao;	
+		else if(dimensao == 5)
+			dimensao = "AU"+dimensao;
+		else if(dimensao == 6)
+			dimensao = "NO"+dimensao;
+		else if(dimensao == 7)
+			dimensao = "ID"+dimensao;
+		else if(dimensao == 8)
 			dimensao = "SS"+dimensao;
 		
 		console.log("caso especial:", dimensao);
