@@ -108,14 +108,25 @@ a.link{
 /*CSS da tabela de registro */
 .card-box {
     padding: 20px;
-    border: 1px solid rgba(54, 64, 74, 0.08);
+    border: 1px solid #BCE8F1;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     background-clip: padding-box;
     margin-bottom: 20px;
-    background-color: #f5f5f5;
+    background-color: #D9EDF7;
 }
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    vertical-align: bottom;
+    border-top: 1px solid #bce8f1 ;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #bce8f1;
+}
+
 .m-t-0 {
     margin-top: 0px;
 }
