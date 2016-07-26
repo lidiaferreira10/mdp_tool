@@ -15,5 +15,58 @@
   <%= @tipo_comunicacao.observacao %>
 </p>
 
+
+
+
 <%= link_to 'Editar', edit_tipo_comunicacao_path(@tipo_comunicacao) %> |
 <%= link_to 'Voltar', tipo_comunicacoes_path(@tipo_comunicacao.analise_privacidade) %>
+
+
+<div id="form-1">
+	<%= form_for(@tipo_comunicacao) do |f| %>
+	<% if @tipo_comunicacao.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@tipo_comunicacao.errors.count, "error") %> prohibited this tipo_comunicacao from being saved:</h2>
+
+		<ul>
+			<% @tipo_comunicacao.errors.full_messages.each do |message| %>
+			<li>
+				<%= message %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+</div>
+
+<div class="row">
+	<div class="col-lg-6" >
+		<%= f.text_field :analise_privacidade_id, :value => @tipo_comunicacao.analise_privacidade.id %>
+		<!--colmeia-->
+		<div class="panel">
+			<div class="panel-body">
+				<div id="container-visualizacao" class="container-grafico"></div>
+			</div>
+		</div>
+	</div>
+		<!--legenda-->
+	<div class="col-lg-6" >
+		<div class="panel">
+			<div class="panel-body">
+				<div id="container-legenda-edit" class="container-grafico"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12" >
+		<div id="options-form" class="actions">
+			<%= link_to 'Voltar', tipo_comunicacoes_path(@tipo_comunicacao.analise_privacidade.id), :class=>"btn btn-default" %>
+		</div>
+	</div>
+	<div class="col-lg-12" >
+		<div id="options-form" class="actions">
+			<%= f.submit 'Salvar', :class=>"btn btn-primary pull-right" %>
+		</div>
+	</div>
+	<% end %>
+</div>
